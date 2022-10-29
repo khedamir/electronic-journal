@@ -1,0 +1,131 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="{% static 'students/css/style.css' %}">
+
+</head>
+<body>
+    <header>
+        <h1>Студент: {{ user.student.name }}</h1>
+        <h3>Группа: {{ user.student.stdgroup }}</h3>
+
+        <h3 class="logout_button"><a href="{% url 'logout' %}">Выйти</a></h3>
+    </header>
+
+
+    <main>
+        <!-- <section class="section0">
+            <h1 class="section_title">Все дисциплины</h1>
+            <form action="" method="GET" class="form_all">
+                <select name="date" id="date-all" size="1">
+                    <option value="1">Январь</option>
+                    <option value="2">Февраль</option>
+                    <option value="3">Март</option>
+                    <option value="4">Апрель</option>
+                    <option value="5">Май</option>
+                    <option value="6">Июнь</option>
+                    <option value="7">Июль</option>
+                    <option value="8">Август</option>
+                    <option value="9">Сентябрь</option>
+                    <option value="10">Октябрь</option>
+                    <option value="11">Ноябрь</option>
+                    <option value="12">Декабрь</option>
+                </select>
+                <button type="submit" class="button">Показать</button>
+                <h3 class="button-filter"><a href="#">Выбор дисциплины</a></h3>            
+            </form>
+            
+            
+            <table class="table_col table_col-all" >
+                <tr>
+                    <th>Дисциплина</th>
+                    <th>Отметки</th>
+                </tr>
+
+                {% for el in disciplines %}
+                    {% if el.group == user.student.stdgroup %}
+                        <tr>
+
+                            <td>{{ el.title }}</td>
+
+                            <td>
+                                {% for mark in marks_all %}
+                                    {% if mark.student == user.student %}
+                                        {% if mark.discipline.title == el.title %}
+                                            <span>{{ mark.points }}</span>
+                                        {% endif %}
+                                    {% endif %}
+                                {% endfor %}
+                            </td>
+
+                        </tr>
+                    {% endif %}
+                {% endfor %}
+
+            </table>
+        </section> -->
+
+
+
+
+
+        <section class="section1">
+            <h1 class="section_title">Выбор дисциплины</h1>
+            <form action="" method="GET" class="form_all">
+                <select name="discipline" id="discipline" size="1">
+                    <option disabled>Выберите дисциплину</option>
+                    {% for el in disciplines %}
+                        {% if el.group == user.student.stdgroup %}
+                            {% if el.pk|stringformat:"i" == request.GET.discipline %}
+                                <option value="{{ el.pk }}" selected>{{ el.title }}</option>
+                            {% else %}
+                                <option value="{{ el.pk }}">{{ el.title }}</option>
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </select>
+                <select name="date" id="date" size="1">
+                    <option value="1">Январь</option>
+                    <option value="2">Февраль</option>
+                    <option value="3">Март</option>
+                    <option value="4">Апрель</option>
+                    <option value="5">Май</option>
+                    <option value="6">Июнь</option>
+                    <option value="7">Июль</option>
+                    <option value="8">Август</option>
+                    <option value="9">Сентябрь</option>
+                    <option value="10">Октябрь</option>
+                    <option value="11">Ноябрь</option>
+                    <option value="12">Декабрь</option>
+                </select>
+                <button type="submit" class="button">Показать</button>
+                <!-- <h3 class="button-filter_not"><a href="#">Оценки по всем дисциплинам</a></h3> -->
+            </form>
+            <table class="table_col">
+                <tr>
+                    <th>Дата</th>
+                    <th>Отметка</th>
+                </tr>
+                {% for mark in marks %}
+                {% if mark.student == user.student %}
+                    <tr>
+                        <td>{{ mark.created }}</td>
+                        <td>{{ mark.points }}</td>
+                    </tr>
+                {% endif %}
+                {% endfor %}
+            </table>
+        </section>        
+    </main>
+
+
+    <script src="{% static 'students/js/scripts.js' %}"></script>
+</body>
+</html>

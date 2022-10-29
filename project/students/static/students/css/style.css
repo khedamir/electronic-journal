@@ -1,0 +1,150 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    /* display: flex; */
+    margin: 0;
+    /* position: relative; */
+}
+
+
+main{
+    margin-left: 300px;
+    padding: 54px 0;
+
+}
+
+header{
+    /* height: 100vh; */
+    width: 300px;
+    background-color: #3E4347;
+    color: #d6d6d6;
+    padding: 34px;
+    position: fixed;
+    bottom: 0;
+    top: 0;
+}
+
+header h1{
+    color: #64cece;
+}
+
+header a{
+    text-decoration: none;
+    color: #f8f6f6;
+    background-color: #64cece;
+    padding: 6px;
+    border-radius: 5px;   
+}
+
+.logout_button{
+    padding-top: 12px;
+}
+
+
+.section1, .section0{
+    margin-left: 64px;
+    /* margin-top: 55px; */
+}
+
+.section0{
+    margin-bottom: 54px;
+}
+
+.section_title{
+    margin: 0;
+}
+
+
+#discipline, #date, #date-all{
+    margin-bottom: 16px;
+    padding: 12px;
+    border: #3E4347 1px solid;
+}
+
+.button{
+    padding: 12px;
+    background-color: #64cece;
+    border: #64cece 1px solid;
+}
+
+
+/* .table_col {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 14px;
+    width: 360px;
+    background: rgb(226, 226, 226);
+    text-align: left;
+    border-collapse: collapse;
+    color: #3E4347;
+    }
+
+.table_col th:first-child, .table_col td:first-child {
+    color: #F5F6F6;
+    border-left: none;
+    background-color: #3E4347;
+    }
+
+.table_col th {
+    font-weight: normal;
+    border-bottom: 2px solid #59a7a7;
+    border-right: 20px solid white;
+    border-left: 20px solid white;
+    padding: 8px 10px;
+    }
+
+.table_col td {
+    border-right: 20px solid white;
+    border-left: 20px solid white;
+    padding: 12px 10px;
+    color: #3E4347;
+    } */
+
+
+.table_col {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 14px;
+    width: 360px;
+    /* background: rgb(226, 226, 226); */
+    text-align: left;
+    border-collapse: collapse;
+    color: #3E4347;
+    border: 1px solid #193953;
+    width: 250px;
+}
+
+.table_col th,
+.table_col td{
+    border: 1px solid #193953;
+    padding: 8px;
+}
+
+
+
+
+
+.table_col-all{
+    width: auto;
+}
+
+
+#date-all, #date, #discipline{
+    margin: 0;
+}
+
+.form_all{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+
+.button-filter a,
+.button-filter_not a{
+    text-decoration: none;
+    margin-left: 50px;
+    color: #64cece;
+}
+

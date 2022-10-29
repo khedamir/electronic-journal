@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="{% static 'teachers/css/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Преподаватель: {{ user.teacher.name }}</h1>
+
+        <h3 class="logout_button"><a href="{% url 'logout' %}">Выйти</a></h3>
+    </header>
+
+
+    <section class="section1">     
+        <form action="" method="GET">
+            <select name="discipline" id="discipline" size="1">
+                <option disabled>Выберите дисциплину</option>
+                <option value="">Все</option>
+                {% for el in disciplines %}
+                <option value="{{ el.pk }}">{{el.title}}</option>
+                {% endfor %}
+            </select>
+            <button type="submit" class="button">Применить</button>
+        </form>
+
+        <table>
+            <tr>
+                <th>Группы</th>
+            </tr>
+            {% for student_group in student_groups %}
+                <tr>
+                    <td class="group"> <a href="{% url 'group_details' pk=student_group.id pk1=discipline_group.id %}">{{ student_group.groupname }}</a> </td>
+                </tr>
+            {% endfor %}
+        </table>
+        
+    </section>
+
+
+</body>
+</html>

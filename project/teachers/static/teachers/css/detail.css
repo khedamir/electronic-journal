@@ -1,0 +1,173 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+header{
+    position: fixed;
+    width: 300px;
+    bottom: 0;
+    top: 0;
+    background-color: #3E4347;
+    color: #d6d6d6;
+    padding: 34px;
+}
+
+header h1{
+    color: #64cece;
+}
+
+header a{
+    text-decoration: none;
+    color: #f8f6f6;
+    background-color: #64cece;
+    padding: 6px;
+    border-radius: 5px;   
+}
+
+.logout_button{
+    padding-top: 12px;
+}
+
+
+.section1{
+    margin-left: 300px;
+    padding: 64px;
+}
+
+
+
+#date{
+    margin-bottom: 16px;
+    padding: 12px;
+    border: #3E4347 1px solid;
+}
+
+.button{
+    padding: 12px;
+    background-color: #64cece;
+    border: #64cece 1px solid;
+}
+
+
+
+.table_col{
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 14px;
+    color: #3E4347;
+    background: rgb(226, 226, 226);
+    border-collapse: collapse;
+    position: relative;
+    margin: 0;
+}
+
+
+.table_col th:first-child, .table_col td:first-child{
+    color: #F5F6F6;
+    border-left: none;
+    background-color: #3E4347;
+    width: 250px;
+}
+
+
+.table_col th{
+    font-weight: normal;
+    border-bottom: 2px solid #59a7a7;
+    /* border-right: 20px solid white; */
+    /* border-left: 20px solid white; */
+    padding: 8px 10px;
+    width: 50px;
+    
+}
+
+
+.table_col td {
+    padding: 12px 10px;
+    color: #3E4347;
+    width: 50px;
+}
+
+.section1 p{
+    font-size: 1.4rem;
+    /* font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif; */
+}
+
+
+
+/* .table_col {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 14px;
+    background: rgb(226, 226, 226);
+    text-align: left;
+    border-collapse: collapse;
+    color: #3E4347;
+    margin: 0;
+}
+
+.table_col th:first-child, .table_col td:first-child {
+    color: #F5F6F6;
+    border-left: none;
+    background-color: #3E4347;
+    width: 250px;
+    }
+
+.table_col th {
+    font-weight: normal;
+    border-bottom: 2px solid #59a7a7;
+    border-right: 20px solid white;
+    border-left: 20px solid white;
+    padding: 8px 10px;
+    width: 50px;
+}
+
+.table_col td {
+    border-right: 20px solid white;
+    border-left: 20px solid white;
+    padding: 12px 10px;
+    color: #3E4347;
+    width: 50px;
+} */
+
+
+.markform{
+    margin: 64px 0;
+    width: 200px;
+    display: none;
+    flex-direction: column;
+}
+
+.markform input, .markform select{
+    margin-bottom: 16px;
+    padding: 0  12px;
+    height: 42px;
+    border: #3E4347 1px solid;
+}
+
+
+
+.table_col input{
+    width: 120px;
+    height: 30px;
+}
+
+
+
+
+.td-form-button{
+    position: absolute;
+    right: 99.5px;
+    bottom: -53px;
+}
+
+.button-form{
+    width: 140px;
+}
+
+
+
+.students_group{
+    margin-top: 0;
+}
